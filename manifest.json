@@ -4,8 +4,8 @@
             "/src/js/httpTrackerConstants.js",
             "/src/js/httpTrackerUtils.js",
             "/src/js/httpTrackerOpen.js",
-            "/src/js/background.js"
-        ]
+            "/src/js/background.js"r
+        ] 
     },
     "description": "An Comprehensive Chrome Extension.[SSI-based Web Authentication, Phishing Detection using URL Analysis, Packet tracing.",
     "manifest_version": 2,
@@ -40,5 +40,8 @@
         "matches": ["<all_urls>"],
         "js": ["/src/js/content.js"]
       }
-    ]
+    ],
+  "externally_connectable": {
+    "matches": ["*://*.google.com/*"]
+  },
 }
