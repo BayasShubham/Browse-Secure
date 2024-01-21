@@ -14,7 +14,7 @@
 <body style="font-size: 100%">
   <div id="web_events_tracking" class="web_event_tracker">
     <div>
-      <div class="left_pane">
+      <div class="left_pane" style="display: none;">
         <div style="height: 30px;" title="Provide a list of comma-separated words so that any url containing one of the words will be tracked by the addon. If the url does not contain any of the words, it will not be tracked. If same word is in skip list also, the matching url will not be tracked as skip list takes precedence. Leaving this input field blank tracks all the urls.">
           <div style="float: left; width: 20%">
             Track urls having :
@@ -36,7 +36,7 @@
           <div id="info_exclude" style="float: left;width: 2%;">
           </div>
           <div class="empty_div">&nbsp;</div>
-        </div>
+        </div> 
         <div style="height: 30px;" title="Provide a list of comma-separated words so that any url containing one of the words will be blocked by the addon and the request will never leave the browser. This acts like a blocker.">
           <div style="width: 20%; float: left;">
             Block urls having :
@@ -67,7 +67,9 @@
           </div>
           <div class="empty_div">&nbsp;</div>
         </div>
-        <div style="height: 30px; margin-bottom: 10px;" title="Provide name, value and an optional url details for each header.&#013;&#013;examples&#013;&#013;1: Adding header to all urls containing word 'google' in them  &#013;&nbsp;&nbsp;&nbsp;&nbsp;url:google&#013;2: Add header to any url, leave the url part empty&#013;&#013;NOTES:&#013;&#013;&nbsp;&nbsp;1: Adding / modifiying forbidden headers has no effect.&#013;&nbsp;&nbsp;2: If header name is blank, that header is not added&#013;&nbsp;&nbsp;3: Only vaild headers will be added for requests matching the url property value and invalid headers will mark the name filed in RED color for indication.&#013;&nbsp;&nbsp;4:Its always good to keep more specific the url">
+        
+        <!-- Not needed -->
+         <div style="height: 30px; margin-bottom: 10px;" title="Provide name, value and an optional url details for each header.&#013;&#013;examples&#013;&#013;1: Adding header to all urls containing word 'google' in them  &#013;&nbsp;&nbsp;&nbsp;&nbsp;url:google&#013;2: Add header to any url, leave the url part empty&#013;&#013;NOTES:&#013;&#013;&nbsp;&nbsp;1: Adding / modifiying forbidden headers has no effect.&#013;&nbsp;&nbsp;2: If header name is blank, that header is not added&#013;&nbsp;&nbsp;3: Only vaild headers will be added for requests matching the url property value and invalid headers will mark the name filed in RED color for indication.&#013;&nbsp;&nbsp;4:Its always good to keep more specific the url">
           <div id="add_modify_headers_banner" style="width: 20%; float: left;">
             Add/Modify request headers :
           </div>
@@ -98,9 +100,10 @@
             </div>
           </div>
           <div class="empty_div">&nbsp;</div>
-        </div>
-      </div>
-      <div class="right_pane">
+        </div> 
+
+      </div> 
+      <div class="right_pane" style="display: none;">
         <div style="float: left; margin-right: 20px; height: 30px;" title="Check this to track form data along with headers and cookies">
           <input id="include_form_data" type="checkbox" checked />
           <label for="include_form_data">
