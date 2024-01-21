@@ -1,0 +1,44 @@
+{
+    "background": {
+        "scripts": [
+            "/src/js/httpTrackerConstants.js",
+            "/src/js/httpTrackerUtils.js",
+            "/src/js/httpTrackerOpen.js",
+            "/src/js/background.js"
+        ]
+    },
+    "description": "An Comprehensive Chrome Extension.[SSI-based Web Authentication, Phishing Detection using URL Analysis, Packet tracing.",
+    "manifest_version": 2,
+    "name": "SecureBrowse",
+    "permissions": [
+        "storage",
+        "webRequest",
+        "<all_urls>",
+        "webRequestBlocking",
+        "tabs",
+        "cookies",
+        "activeTab", "webNavigation"
+    ],
+    "version": "2.2.6",
+    "browser_action": {
+        "browser_style": true,
+        "default_icon": {
+            "16": "/src/assets/default.png",
+            "32": "/src/assets/default.png"
+        },
+        "default_title": "An Comprehensive Chrome Extension.[SSI-based Web Authentication, Phishing Detection using URL Analysis, Packet tracing."
+    },
+    "options_ui": {
+        "page": "/src/html/options.html",
+        "open_in_tab": true
+    },
+    "icons": {
+        "320": "/src/assets/default.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["/src/js/content.js"]
+      }
+    ]
+}
